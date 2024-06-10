@@ -18,7 +18,7 @@ class PhoneAdapter: RecyclerView.Adapter<PhoneAdapter.PhoneViewHolder>() {
         fun bind(phone: Phone) {
             with(binding) {
                 tvId.text = phone.id.toString()
-                tvphone.text = phone.phone
+                tvphone.text = phone.phone.toString()
 
 
                 root.setOnClickListener {
