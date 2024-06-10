@@ -22,8 +22,8 @@ class PhoneFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentPhoneBinding.inflate(inflater, container, false)
-        tvphone=binding.tvphone
-
+   //     tvphone=binding.tvphone
+/*
         var phone = Phone(" ")
         val preferences =requireActivity().getSharedPreferences(PHONES,MODE_PRIVATE)
         val gson = Gson()
@@ -63,7 +63,7 @@ class PhoneFragment : Fragment() {
                 Toast.makeText(requireContext(), "Debe completar todos los campos!", Toast.LENGTH_SHORT).show()
             }*/
         }
-
+*/
 
         return binding.root
     }
