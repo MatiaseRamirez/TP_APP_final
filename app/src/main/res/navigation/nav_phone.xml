@@ -31,10 +31,10 @@
     <fragment
         android:id="@+id/updateFragmentPhone"
         android:label="fragment_update"
-        android:name="mylogin.com.iu.add.PhoneAddFragment"
+        android:name="mylogin.com.iu.update.PhoneUpdateFragment"
         tools:layout="@layout/fragment_phone_update" >
         <action
-            android:id="@+id/action_updateFragmentPhone_to_listFragmentPhone2"
+            android:id="@+id/action_updateFragmentPhone_to_listFragmentPhone"
             app:destination="@id/listFragmentPhone" />
     </fragment>
 </navigation>

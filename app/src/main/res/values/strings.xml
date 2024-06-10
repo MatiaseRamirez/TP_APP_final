@@ -55,5 +55,7 @@
     <string name="price_text">$100</string>
     <string name="buy_button_text">Comprar</string>
 
+    <string name="no_option">No</string>
+
 
 </resources>
