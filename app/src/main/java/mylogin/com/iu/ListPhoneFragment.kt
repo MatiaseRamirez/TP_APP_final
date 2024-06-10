@@ -51,7 +51,7 @@ class ListPhoneFragment : Fragment(), MenuProvider {
 
         binding.btnAdd.setOnClickListener {
             //findNavController().navigate(R.id.action_listFragmentPhone_to_updateFragmentPhone2)
-            findNavController().navigate(R.id.action_listFragmentPhone_to_updateFragmentPhone)
+            findNavController().navigate(R.id.action_listFragmentPhone_to_addFragmentPhone)
         }
 
 
