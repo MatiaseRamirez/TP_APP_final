@@ -10,7 +10,7 @@ Clonar y ejecutar en android studio.
 
 ## Tecnologias Usadas
 
-- 
+- prueba
 -  
 - 
 
