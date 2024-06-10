@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group>
+        <item android:id="@+id/nav_item_cards"
+            android:icon="@drawable/ic_card"
+            android:title="Mis Tarjetas"/>
+
+        <item android:id="@+id/nav_item_addres"
+            android:icon="@drawable/ic_addres"
+            android:title="Dirección"/>
+
+        <item android:id="@+id/nav_item_phone"
+            android:icon="@drawable/ic_phone"
+            android:title="Telefono"/>
+
+        <item android:id="@+id/nav_item_favorites"
+            android:icon="@drawable/ic_favorites"
+            android:title="Favoritos"/>
+
+        <item android:id="@+id/nav_item_claims"
+            android:icon="@drawable/ic_claims"
+            android:title="Reclamos"/>
+
+        <item
+            android:id="@+id/nav_item_menu"
+            android:icon="@drawable/ic_menu_burga"
+            android:title="Menu" />
+
+        <item android:id="@+id/nav_item_null"
+            android:title=""/>
+
+        <item android:id="@+id/nav_item_singoff"
+            android:icon="@drawable/ic_singoff"
+            android:title="Cerrar Sesión"/>
+    </group>
+</menu>
+
+
+

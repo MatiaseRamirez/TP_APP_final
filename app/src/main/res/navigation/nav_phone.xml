@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_phone"
+    app:startDestination="@id/listFragmentPhone">
+
+
+    <fragment
+        android:id="@+id/listFragmentPhone"
+        android:name="mylogin.com.iu.ListPhoneFragment"
+        android:label="fragment_list"
+        tools:layout="@layout/fragment_list_phone" >
+        <action
+            android:id="@+id/action_listFragmentPhone_to_addFragmentPhone"
+            app:destination="@id/addFragmentPhone" />
+        <action
+            android:id="@+id/action_listFragmentPhone_to_updateFragmentPhone"
+            app:destination="@id/updateFragmentPhone" />
+    </fragment>
+    <fragment
+        android:id="@+id/addFragmentPhone"
+        android:name="mylogin.com.iu.add.PhoneAddFragment"
+        android:label="fragment_add"
+        tools:layout="@layout/fragment_phone_add" >
+        <action
+            android:id="@+id/action_addFragmentPhone_to_listFragmentPhone"
+            app:destination="@id/listFragmentPhone" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateFragmentPhone"
+        android:label="fragment_update"
+        android:name="mylogin.com.iu.add.PhoneAddFragment"
+        tools:layout="@layout/fragment_phone_update" >
+        <action
+            android:id="@+id/action_updateFragmentPhone_to_listFragmentPhone2"
+            app:destination="@id/listFragmentPhone" />
+    </fragment>
+</navigation>

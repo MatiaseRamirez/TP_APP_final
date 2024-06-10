@@ -1,0 +1,59 @@
+<resources>
+    <!--  <string name="app_name1">ActivityHome</string>-->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_name">Burga Codding</string>
+
+
+    <string name="nav_drawer_home_open">Open</string>
+    <string name="nav_drawer_home_close">Close</string>
+
+    <!--  Strings de section Tarjetas-->
+    <string name="tarjetas_text">Tarjetas</string>
+    <string name="card_number_label">Número de Tarjeta:</string>
+    <string name="enter_card_number">Ingresa el número de tarjeta</string>
+    <string name="expiry_date_label">Fecha de Vencimiento: (MM/AAAA)</string> <!-- Agrega esta línea -->
+    <string name="enter_expiry_date">Ingresa la fecha de vencimiento</string>
+    <string name="card_holder_name_label">Hombre del Titular:</string>
+    <string name="enter_card_holder_name">Ingresa el nombre del titular</string>
+
+    <!--  Strings de section Direccion-->
+    <string name="direccion_text">Dirección</string>
+    <string name="nombre_direccion_text">Nombre de la dirección</string>
+    <string name="hint_direccion">Ingrese la dirección</string>
+    <string name="altura_text">Altura</string>
+    <string name="hint_altura">Ingrese la altura</string>
+    <string name="cp_text">Codigo Postal</string>
+    <string name="hint_cp">Ingrese el codigo postal</string>
+    <string name="provincia_text">Provincia</string>
+    <string name="hint_provincia">Ingrese la provincia</string>
+
+    <!--  Strings de section Telefono-->
+    <string name="phone_text">Teléfono</string>
+    <string name="phone_number_label">Número de Teléfono:</string>
+    <string name="enter_phone_number">Ingresa tu número de teléfono</string>
+
+    <!--  Strings de section Favoritos-->
+    <string name="title_save_favorite_burger">Mis Hamburguesas Favoritas</string>
+    <string name="label_favorite_burger">Nombre de la Hamburguesa</string>
+    <string name="hint_enter_favorite_burger">Ingrese el nombre de la hamburguesa favorite</string>
+    <string name="label_favorite_notes">Notas</string>
+    <string name="hint_enter_favorite_notes">Ingrese notas sobre la hamburguesa favorita</string>
+    <string name="button_save_favorite_burger">Guardar Hamburguesa Favorita</string>
+
+
+    <!--  Strings de section Reclamos-->
+    <string name="title_generate_claim">Generar Reclamo</string>
+    <string name="label_claim_title">Título del Reclamo</string>
+    <string name="hint_enter_claim_title">Ingrese el título del reclamo</string>
+    <string name="label_claim_description">Descripción del Reclamo</string>
+    <string name="hint_enter_claim_description">Ingrese la descripción del reclamo</string>
+    <string name="button_submit_claim">Enviar Reclamo</string>
+
+    <!--  Strings de section Menu Burgas-->
+    <string name="image_description">Mega Burga</string>
+    <string name="menu_title">Menú de Burgas</string>
+    <string name="price_text">$100</string>
+    <string name="buy_button_text">Comprar</string>
+
+
+</resources>
