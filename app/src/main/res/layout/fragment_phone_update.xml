@@ -12,14 +12,15 @@
         android:id="@+id/tvTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="EDITAR"
+        android:text="Modificacion de Tefono "
         android:textSize="32dp"
         android:textAlignment="center"
         android:textStyle="italic"
         android:layout_marginTop="35dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/white" />
 
 
     <EditText
@@ -31,16 +32,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvTitle"
-        android:layout_margin="16dp"/>
+        android:layout_margin="16dp"
+        android:textColor="@color/white"/>
 
     <Button
         android:id="@+id/btnUpdateUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Update"
+        android:text="Modificar telefono"
         android:textStyle="bold"
-        android:textColor="@color/white"
-        android:backgroundTint="@color/black"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etPhone"
