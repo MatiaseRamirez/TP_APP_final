@@ -4,7 +4,8 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/layoutItemRecyclerphone">
+    android:id="@+id/layoutItemRecyclerphone"
+    android:layout_marginTop="30dp">
 
 
     <TextView
