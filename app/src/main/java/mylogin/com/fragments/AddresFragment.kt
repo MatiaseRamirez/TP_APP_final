@@ -18,7 +18,7 @@ import mylogin.com.databinding.FragmentAddresBinding
 class AddresFragment : Fragment() {
 
     private lateinit var binding: FragmentAddresBinding
-    private lateinit var tvaddres: TextView
+   // private lateinit var tvaddres: TextView
     @SuppressLint("SetTextI18n")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,7 +26,7 @@ class AddresFragment : Fragment() {
 
     ): View? {
         binding = FragmentAddresBinding.inflate(inflater, container, false)
-        tvaddres = binding.tvaddres
+      /*  tvaddres = binding.tvaddres
         var addres = Addres("", "", "", "")
         val preferences = requireActivity().getSharedPreferences(ADDRESSES, MODE_PRIVATE)
 
@@ -69,7 +69,7 @@ class AddresFragment : Fragment() {
                     Toast.makeText(requireContext(), "Debe completar todos los campos!", Toast.LENGTH_SHORT).show()
                 }
             }
-
+*/
         return binding.root
     }
 

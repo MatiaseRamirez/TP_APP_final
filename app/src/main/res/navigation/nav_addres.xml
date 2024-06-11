@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_addres"
+    app:startDestination="@id/listFragmentAddres">
+
+    <fragment
+        android:id="@+id/listFragmentAddres"
+        android:name="mylogin.com.iu.ListAdrresFragment"
+        android:label="fragment_list"
+        tools:layout="@layout/fragment_list_addres" >
+        <action
+            android:id="@+id/action_listFragmentAddres_to_addFragmentAddres"
+            app:destination="@id/addFragmentPhone" />
+        <action
+            android:id="@+id/action_listFragmentAddres_to_updateFragmentAddres"
+            app:destination="@id/updateFragmentAddres" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addFragmentPhone"
+        android:name="mylogin.com.iu.add.AddresAddFragment"
+        android:label="fragment_add"
+        tools:layout="@layout/fragment_addres_add" >
+        <action
+            android:id="@+id/action_addFragmentAddres_to_listFragmentAddres"
+            app:destination="@id/listFragmentAddres" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateFragmentAddres"
+        android:label="fragment_update"
+        android:name="mylogin.com.iu.update.AddresUpdateFragment"
+        tools:layout="@layout/fragment_addres_update" >
+        <action
+            android:id="@+id/action_updateFragmentAddres_to_listFragmentAddres"
+            app:destination="@id/listFragmentAddres" />
+    </fragment>
+
+
+
+
+</navigation>
