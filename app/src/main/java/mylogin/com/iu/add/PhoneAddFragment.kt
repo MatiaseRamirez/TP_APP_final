@@ -29,7 +29,7 @@ class PhoneAddFragment: Fragment() {
 
         binding.btnAddPhone.setOnClickListener {
 
-            val numero = binding.phoneNumberInput.toString()
+            val numero = binding.phoneNumberInput.text.toString()
 
             if (numero.isNotEmpty()) {
                 // Creo el objeto
