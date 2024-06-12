@@ -3,6 +3,7 @@ package mylogin.com.iu
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CircleCrop
@@ -25,12 +26,23 @@ class BurgaAdapter : RecyclerView.Adapter<BurgaAdapter.BurgaAdapterViewHolder>()
 
     inner class BurgaAdapterViewHolder(private val binding: ItemRecyclerviewBurgaBinding): RecyclerView.ViewHolder(binding.root) {
         fun bind(burga: Burga) {
-            binding.nameTextView.text = burga.name
-            binding.descriptionTextView.text = burga.description
-            binding.priceTextView.text = burga.price.toString()
-            Glide.with(binding.root.context).load(burga.image)
-                .apply(RequestOptions.bitmapTransform(CircleCrop())).into(binding.imgBurga)
+            with(binding) {
+                binding.nameTextView.text = burga.name
+                binding.descriptionTextView.text = burga.description
+                binding.priceTextView.text = burga.price.toString()
+                Glide.with(binding.root.context).load(burga.image)
+                    .apply(RequestOptions.bitmapTransform(CircleCrop())).into(binding.imgBurga)
 
+
+
+                root.setOnClickListener {
+
+                    val bundle = Bundle()
+                    bundle.putSerializable("burga", burga)
+                    itemView.findNavController()
+                        .navigate(R.id.action_listFragmentBurga_to_addFragmentRepair, bundle)
+                }
+            }
         }
     }
 

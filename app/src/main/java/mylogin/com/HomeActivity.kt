@@ -70,9 +70,9 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_item_phone -> {
                 replaceFragment(PhoneFragment())
             }
-            R.id.nav_item_favorites -> {
+            /*R.id.nav_item_favorites -> {
                 replaceFragment(FavoritesFragment())
-            }
+            }*/
             R.id.nav_item_claims -> {
                 replaceFragment(ClaimsFragment())
             }

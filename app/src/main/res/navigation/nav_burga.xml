@@ -11,6 +11,20 @@
         android:name="mylogin.com.iu.ListBurgaFragment"
         android:label="fragment_list"
         tools:layout="@layout/fragment_list_burga" >
+
+        <action
+            android:id="@+id/action_listFragmentBurga_to_addFragmentRepair"
+            app:destination="@id/fragmentrepair" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentrepair"
+        android:label="fragment_repair"
+        android:name="mylogin.com.fragments.RepairFragment"
+        tools:layout="@layout/fragment_repair" >
+        <action
+            android:id="@+id/action_fragment_repair_to_listFragmentBurga"
+            app:destination="@id/listFragmentBurga" />
     </fragment>
 
 </navigation>

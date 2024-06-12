@@ -13,11 +13,9 @@
         <item android:id="@+id/nav_item_phone"
             android:icon="@drawable/ic_phone"
             android:title="Telefono"/>
-
-        <item android:id="@+id/nav_item_favorites"
+        <!--<item android:id="@+id/nav_item_favorites"
             android:icon="@drawable/ic_favorites"
-            android:title="Favoritos"/>
-
+            android:title="Favoritos"/>-->
         <item android:id="@+id/nav_item_claims"
             android:icon="@drawable/ic_claims"
             android:title="Reclamos"/>
