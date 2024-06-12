@@ -18,13 +18,6 @@ class MenuFragment : Fragment() {
     ): View? {
         binding = FragmentMenuBinding.inflate(inflater, container, false)
 
-        binding.buyButton1.setOnClickListener {
-
-            Toast.makeText(requireContext(), "Proximante", Toast.LENGTH_SHORT).show()
-        }
-        binding.buyButton2.setOnClickListener {
-            Toast.makeText(requireContext(), "Proximante", Toast.LENGTH_SHORT).show()
-        }
 
         return binding.root
     }
