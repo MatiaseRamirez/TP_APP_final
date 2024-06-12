@@ -1,5 +1,6 @@
 package mylogin.com.iu
 
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -27,9 +28,10 @@ class BurgaAdapter : RecyclerView.Adapter<BurgaAdapter.BurgaAdapterViewHolder>()
             binding.nameTextView.text = burga.name
             binding.descriptionTextView.text = burga.description
             binding.priceTextView.text = burga.price.toString()
-            Glide.with(binding.root.context).load(burga.image).apply(RequestOptions.bitmapTransform(CircleCrop())).into(binding.imgBurga)
-        }
+            Glide.with(binding.root.context).load(burga.image)
+                .apply(RequestOptions.bitmapTransform(CircleCrop())).into(binding.imgBurga)
 
+        }
     }
 
 
@@ -42,7 +44,7 @@ class BurgaAdapter : RecyclerView.Adapter<BurgaAdapter.BurgaAdapterViewHolder>()
 
     override fun onBindViewHolder(holder: BurgaAdapterViewHolder, position: Int) {
         val burga = burgaList.get(position)
-        holder.bind(burga)
+        holder.bind(burga=burga)
     }
 
     override fun getItemCount(): Int {
