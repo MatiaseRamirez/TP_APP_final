@@ -16,13 +16,14 @@ import mylogin.com.databinding.ItemRecyclerviewBurgaBinding
 class BurgaAdapter : RecyclerView.Adapter<BurgaAdapter.BurgaAdapterViewHolder>() {
 
     val burgaList = arrayListOf<Burga>(
-        Burga(R.drawable.burga, "Destructora","La mejor burga", 3000),
-        Burga(R.drawable.burga, "Estudiante","La mejor burga", 2000),
-        Burga(R.drawable.burga, "Clasica","La mejor burga", 1500),
-        Burga(R.drawable.burga, "Picante","La mejor burga", 1500),
-        Burga(R.drawable.burga, "3 Estrellas","La mejor burga", 3000),
-        Burga(R.drawable.burga, "Crunchi Burger","La mejor burga", 4000),
-        )
+        Burga(R.drawable.burga, "Destructora", "¡Una explosión de sabores!", 3000),
+        Burga(R.drawable.burga, "Estudiante", "Carne, queso y vegetales frescos.", 2000),
+        Burga(R.drawable.burga, "Clásica", "La esencia de la hamburguesa", 1500),
+        Burga(R.drawable.burga, "Picante", "Audaz y picante", 1500),
+        Burga(R.drawable.burga, "3 Estrellas", "Una experiencia de lujo", 3000),
+        Burga(R.drawable.burga, "Crunchi Burger", "Texturas irresistibles", 4000)
+    )
+
 
     inner class BurgaAdapterViewHolder(private val binding: ItemRecyclerviewBurgaBinding): RecyclerView.ViewHolder(binding.root) {
         fun bind(burga: Burga) {
