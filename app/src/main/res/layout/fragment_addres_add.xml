@@ -11,14 +11,14 @@
         android:id="@+id/direccion_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/direccion_text"
-        android:textSize="32sp"
+        android:text="Agregar Dirección"
+        android:textSize="25sp"
         android:textColor="@color/white"
-        android:textStyle="bold"
+        android:textStyle="italic"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="55dp"/>
 
 
     <TextView

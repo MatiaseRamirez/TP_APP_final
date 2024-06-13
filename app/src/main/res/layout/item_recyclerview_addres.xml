@@ -4,7 +4,8 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/layoutItemRecyclerAddres">
+    android:id="@+id/layoutItemRecyclerAddres"
+    android:layout_marginTop="30dp">
 
 
     <TextView
@@ -16,7 +17,8 @@
         android:textAlignment="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@color/white"/>
 
 
     <TextView
@@ -28,7 +30,8 @@
         app:layout_constraintStart_toEndOf="@+id/tvId"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="direccion"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="16dp"
+        android:textColor="@color/white"/>
 
     <TextView
         android:id="@+id/tvaltura"
@@ -38,7 +41,8 @@
         android:textSize="23sp"
         app:layout_constraintStart_toEndOf="@+id/tvId"
         app:layout_constraintTop_toBottomOf="@+id/tvDireccion"
-        tools:text="altura"/>
+        tools:text="altura"
+        android:textColor="@color/white"/>
     <TextView
         android:id="@+id/tvcp"
         android:layout_width="0dp"
@@ -47,7 +51,8 @@
         android:textSize="23sp"
         app:layout_constraintStart_toEndOf="@+id/tvId"
         app:layout_constraintTop_toBottomOf="@+id/tvaltura"
-        tools:text="Codigo Postal"/>
+        tools:text="Codigo Postal"
+        android:textColor="@color/white"/>
 
     <TextView
         android:id="@+id/tvprov"
@@ -58,6 +63,7 @@
         app:layout_constraintStart_toEndOf="@+id/tvId"
         app:layout_constraintTop_toBottomOf="@+id/tvcp"
         tools:text="Provincia"
+        android:textColor="@color/white"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
