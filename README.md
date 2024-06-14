@@ -18,6 +18,7 @@ Clonar y ejecutar en android studio.
 - Fragments
 - Recyclerview
 - Room
+- Control Nav
 
 ## Proyecto
 
