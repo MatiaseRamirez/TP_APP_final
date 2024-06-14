@@ -27,7 +27,9 @@ Creamos una app que simula el uso por parte de un usuario, para poder comprar ha
 
 ## Screenshots
 
+![banner](https://github.com/MatiaseRamirez/TP_APP_final/assets/55300994/788ab48d-3fa5-4361-a4f1-655170cea82e)
 
+![banner2](https://github.com/MatiaseRamirez/TP_APP_final/assets/55300994/f27b5306-37ff-433d-9205-45db426d8b7f)
 
 
 ## Caracteristicas
