@@ -13,7 +13,7 @@ import mylogin.com.model.Claim
 interface ClaimDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insert(claim: Claim)
-//bbdd
+//
 
     @Query("SELECT * FROM claim_table ORDER BY id ASC")
     fun readAllData(): LiveData<List<Claim>> //getall
