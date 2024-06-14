@@ -5,21 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragments.ClaimsFragment">
+    tools:context=".iu.update.ClaimUpdateFragment">
 
     <!-- Encabezado -->
     <TextView
-        android:id="@+id/claims_header"
+        android:id="@+id/claim_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/title_generate_claim"
+        android:text="Modificar Reclamo"
         android:textSize="32sp"
         android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="55dp"/>
 
     <!-- Campo para el título del reclamo -->
     <TextView
@@ -30,7 +30,7 @@
         android:textSize="18sp"
         android:textColor="@color/white"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/claims_header"
+        app:layout_constraintTop_toBottomOf="@id/claim_header"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"/>
@@ -85,7 +85,7 @@
         android:id="@+id/submit_claim_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="button_submit_claim"
+        android:text="@string/modificar_reclamo"
         app:layout_constraintTop_toBottomOf="@id/claim_description_input"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

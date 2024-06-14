@@ -47,7 +47,7 @@
     <string name="hint_enter_claim_title">Ingrese el título del reclamo</string>
     <string name="label_claim_description">Descripción del Reclamo</string>
     <string name="hint_enter_claim_description">Ingrese la descripción del reclamo</string>
-    <string name="button_submit_claim">Enviar Reclamo</string>
+    <string name="modificar_reclamo">Modificar Reclamo</string>
 
     <!--  Strings de section Menu Burgas-->
     <string name="image_description">Mega Burga</string>

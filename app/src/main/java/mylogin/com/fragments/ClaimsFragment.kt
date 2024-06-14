@@ -10,17 +10,19 @@ import android.widget.TextView
 import android.widget.Toast
 import com.google.gson.Gson
 import mylogin.com.construc.Claim
-import mylogin.com.databinding.FragmentClaimsBinding
+import mylogin.com.databinding.FragmentClaimBinding
 
 class ClaimsFragment : Fragment() {
 
-    private lateinit var binding: FragmentClaimsBinding
-    private lateinit var tvclaim:TextView
+    private lateinit var binding: FragmentClaimBinding
+    private lateinit var tvclaim: TextView
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentClaimsBinding.inflate(inflater, container, false)
+        binding = FragmentClaimBinding.inflate(inflater, container, false)
+        /*
+
         tvclaim=binding.tvclaim
         var claim = Claim(" ","")
         val preferences =requireActivity().getSharedPreferences(
@@ -64,18 +66,22 @@ class ClaimsFragment : Fragment() {
 
 
 
+    */
 
         return binding.root
+
+
     }
-    private fun validateFields(title:String , description:String ): Boolean {
-        return if (title.isNullOrBlank() && description.isNullOrBlank()  != null) {
+
+    private fun validateFields(title: String, description: String): Boolean {
+        return if (title.isNullOrBlank() && description.isNullOrBlank() != null) {
             false
         } else {
             true
         }
     }
+
     companion object {
         const val CLAIMS = "Reclamos"
     }
-
 }

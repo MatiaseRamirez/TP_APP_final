@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_claim"
+    app:startDestination="@id/listFragmentClaim">
+
+    <fragment
+        android:id="@+id/listFragmentClaim"
+        android:name="mylogin.com.iu.ListClaimFragment"
+        android:label="fragment_list"
+        tools:layout="@layout/fragment_list_claim" >
+        <action
+            android:id="@+id/action_listFragmentClaim_to_addFragmentClaim"
+            app:destination="@id/addFragmentPhone" />
+        <action
+            android:id="@+id/action_listFragmentClaim_to_updateFragmentClaim"
+            app:destination="@id/updateFragmentClaim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addFragmentPhone"
+        android:name="mylogin.com.iu.add.ClaimAddFragment"
+        android:label="fragment_add"
+        tools:layout="@layout/fragment_claim_add" >
+        <action
+            android:id="@+id/action_addFragmentClaim_to_listFragmentClaim"
+            app:destination="@id/listFragmentClaim" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateFragmentClaim"
+        android:label="fragment_update"
+        android:name="mylogin.com.iu.update.ClaimUpdateFragment"
+        tools:layout="@layout/fragment_claim_update" >
+        <action
+            android:id="@+id/action_updateFragmentClaim_to_listFragmentClaim"
+            app:destination="@id/listFragmentClaim" />
+    </fragment>
+
+
+
+
+</navigation>
