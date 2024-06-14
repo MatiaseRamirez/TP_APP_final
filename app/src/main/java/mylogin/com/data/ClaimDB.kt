@@ -9,7 +9,7 @@ import mylogin.com.model.Claim
 
 @Database(entities = [Claim::class], version = 3, exportSchema = false)
 abstract class ClaimDB : RoomDatabase() {
-
+//bbss
     abstract fun claimDao(): ClaimDao
 
     companion object {
