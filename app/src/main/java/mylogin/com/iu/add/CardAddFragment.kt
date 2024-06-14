@@ -5,7 +5,9 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import android.widget.Toast
+import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
@@ -17,8 +19,10 @@ import mylogin.com.viewModel.CardViewModel
 class CardAddFragment: Fragment()  {
 
     private lateinit var binding: FragmentCardAddBinding
+    private lateinit var expiryDateInput: EditText
 
     private val cardViewModel by viewModels<CardViewModel>()
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -26,6 +30,16 @@ class CardAddFragment: Fragment()  {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentCardAddBinding.inflate(inflater, container, false)
+
+        expiryDateInput=binding.cardFechaVencInput
+        expiryDateInput.addTextChangedListener {
+            val text = it.toString()
+            if (text.length == 2) {
+                expiryDateInput.setText("$text/")
+                expiryDateInput.setSelection(text.length + 1)
+            }
+        }
+
 
         binding.btnAddCard.setOnClickListener {
 

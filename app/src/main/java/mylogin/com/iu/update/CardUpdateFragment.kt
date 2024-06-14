@@ -8,9 +8,11 @@ import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import android.widget.Toast
 import androidx.core.view.MenuHost
 import androidx.core.view.MenuProvider
+import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
@@ -24,6 +26,7 @@ class CardUpdateFragment : Fragment(), MenuProvider {
 
     private lateinit var binding: FragmentCardUpdateBinding
     private val cardViewModel by viewModels<CardViewModel>()
+    private lateinit var expiryDateInput: EditText
 
     val nothing = null
     private var card: Card? = nothing
@@ -34,6 +37,20 @@ class CardUpdateFragment : Fragment(), MenuProvider {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentCardUpdateBinding.inflate(inflater, container, false)
+
+
+        expiryDateInput=binding.cardFechaVencInput
+        expiryDateInput.addTextChangedListener {
+            val text = it.toString()
+            if (text.length == 2) {
+                expiryDateInput.setText("$text/")
+                expiryDateInput.setSelection(text.length + 1)
+            }
+        }
+
+
+
+
 
         card = arguments?.getSerializable("card") as Card // Bundle
         binding.cardNumberInput.setText(card?.let { it.numero })
