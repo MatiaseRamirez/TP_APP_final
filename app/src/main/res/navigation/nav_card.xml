@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_card"
+    app:startDestination="@id/listFragmentCard">
+
+    <fragment
+        android:id="@+id/listFragmentCard"
+        android:name="mylogin.com.iu.ListCardFragment"
+        android:label="fragment_list"
+        tools:layout="@layout/fragment_list_card" >
+        <action
+            android:id="@+id/action_listFragmentCard_to_addFragmentCard"
+            app:destination="@id/addFragmentPhone" />
+        <action
+            android:id="@+id/action_listFragmentCard_to_updateFragmentCard"
+            app:destination="@id/updateFragmentCard" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addFragmentPhone"
+        android:name="mylogin.com.iu.add.CardAddFragment"
+        android:label="fragment_add"
+        tools:layout="@layout/fragment_card_add" >
+        <action
+            android:id="@+id/action_addFragmentCard_to_listFragmentCard"
+            app:destination="@id/listFragmentCard" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateFragmentCard"
+        android:label="fragment_update"
+        android:name="mylogin.com.iu.update.CardUpdateFragment"
+        tools:layout="@layout/fragment_card_update" >
+        <action
+            android:id="@+id/action_updateFragmentCard_to_listFragmentCard"
+            app:destination="@id/listFragmentCard" />
+    </fragment>
+
+
+
+
+</navigation>
