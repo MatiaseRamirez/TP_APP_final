@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import mylogin.com.R
-import mylogin.com.databinding.ItemRecyclerviewAddresBinding
 import mylogin.com.databinding.ItemRecyclerviewClaimBinding
 import mylogin.com.model.Claim
 

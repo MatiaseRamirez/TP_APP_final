@@ -11,11 +11,8 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import mylogin.com.R
 import mylogin.com.databinding.FragmentAddresAddBinding
-import mylogin.com.databinding.FragmentPhoneAddBinding
 import mylogin.com.model.Addres
-import mylogin.com.model.Phone
 import mylogin.com.viewModel.AddresViewModel
-import mylogin.com.viewModel.PhoneViewModel
 
 class AddresAddFragment: Fragment()  {
 

@@ -2,9 +2,7 @@ package mylogin.com.repository
 
 import androidx.lifecycle.LiveData
 import mylogin.com.data.AddresDB
-import mylogin.com.data.PhoneDB
 import mylogin.com.model.Addres
-import mylogin.com.model.Phone
 
 class AddresRepository {
 

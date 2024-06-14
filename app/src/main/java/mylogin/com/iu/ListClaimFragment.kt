@@ -8,6 +8,7 @@ import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.core.view.MenuHost
 import androidx.core.view.MenuProvider
 import androidx.fragment.app.Fragment
@@ -65,13 +66,14 @@ class ListClaimFragment: Fragment(), MenuProvider {
             val dialog = AlertDialog.Builder(requireContext())
 
             dialog.setTitle("¿Eliminar Todos?")
-            dialog.setMessage("¿Esta seguro que desea eliminar a todos los usuarios?")
+            dialog.setMessage("¿Esta seguro que desea eliminar a todos los reclamos?")
 
             dialog.setNegativeButton("No") { _,_ ->
                 return@setNegativeButton
             }
 
             dialog.setPositiveButton("Yes") { _,_ ->
+                Toast.makeText(requireContext(), "Las reclamos fueron eliminadas con éxito! ", Toast.LENGTH_SHORT).show()
                 claimViewModel.deleteAllClaims()
             }
 

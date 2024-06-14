@@ -44,7 +44,7 @@
         tools:text="Fecha de Venc. (MM/AAAA)"
         android:textColor="@color/white"/>
     <TextView
-        android:id="@+id/tvcp"
+        android:id="@+id/tvname"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:textAlignment="center"

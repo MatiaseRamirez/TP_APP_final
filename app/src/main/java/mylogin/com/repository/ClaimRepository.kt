@@ -2,9 +2,7 @@ package mylogin.com.repository
 
 import androidx.lifecycle.LiveData
 import mylogin.com.data.ClaimDB
-
 import mylogin.com.model.Claim
-
 
 class ClaimRepository {
 

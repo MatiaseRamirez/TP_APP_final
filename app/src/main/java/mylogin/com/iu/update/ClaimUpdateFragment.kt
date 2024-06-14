@@ -73,6 +73,7 @@ class ClaimUpdateFragment : Fragment(), MenuProvider {
 
             val claim = claim.copy(title = title, description = description)
             claimViewModel.updateClaim(claim=claim)
+            Toast.makeText(requireContext(), " La modificación fue realizada con éxito!", Toast.LENGTH_SHORT).show()
 
             findNavController().navigate(R.id.action_updateFragmentClaim_to_listFragmentClaim)
 

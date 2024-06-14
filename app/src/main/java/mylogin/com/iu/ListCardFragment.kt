@@ -18,30 +18,30 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import mylogin.com.R
-import mylogin.com.databinding.FragmentListAddresBinding
-import mylogin.com.viewModel.AddresViewModel
+import mylogin.com.databinding.FragmentListCardBinding
+import mylogin.com.viewModel.CardViewModel
 
-class ListAdrresFragment: Fragment(), MenuProvider {
+class ListCardFragment: Fragment(), MenuProvider {
 
-        private lateinit var binding: FragmentListAddresBinding
+        private lateinit var binding: FragmentListCardBinding
 
-        private val addresViewModel by viewModels<AddresViewModel>()
+        private val cardViewModel by viewModels<CardViewModel>()
 
         override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
         ): View? {
-            binding = FragmentListAddresBinding.inflate(inflater, container, false)
+            binding = FragmentListCardBinding.inflate(inflater, container, false)
 
 
-            val adapter = AddresAdapter()
-            binding.recyclerViewAddres.layoutManager = LinearLayoutManager(requireContext())
-            binding.recyclerViewAddres.adapter = adapter
+            val adapter = CardAdapter()
+            binding.recyclerViewCard.layoutManager = LinearLayoutManager(requireContext())
+            binding.recyclerViewCard.adapter = adapter
 
 
             // Linea divisoria
             val divider = DividerItemDecoration(requireContext(), LinearLayoutManager(requireContext()).orientation)
-            binding.recyclerViewAddres.addItemDecoration(divider)
+            binding.recyclerViewCard.addItemDecoration(divider)
 
             val menuHost: MenuHost = requireActivity()
             menuHost.addMenuProvider(this, viewLifecycleOwner, Lifecycle.State.RESUMED)
@@ -49,12 +49,12 @@ class ListAdrresFragment: Fragment(), MenuProvider {
 
 
             binding.btnAdd.setOnClickListener {
-                findNavController().navigate(R.id.action_listFragmentAddres_to_addFragmentAddres)
+                findNavController().navigate(R.id.action_listFragmentCard_to_addFragmentCard)
             }
 
 
-            addresViewModel.readAllData.observe(viewLifecycleOwner) { addresList ->
-                adapter.setList(address = addresList)
+            cardViewModel.readAllData.observe(viewLifecycleOwner) { cardList ->
+                adapter.setList(cards = cardList)
             }
 
 
@@ -66,16 +66,15 @@ class ListAdrresFragment: Fragment(), MenuProvider {
             val dialog = AlertDialog.Builder(requireContext())
 
             dialog.setTitle("¿Eliminar Todos?")
-            dialog.setMessage("¿Esta seguro que desea eliminar a todos los direcciones?")
+            dialog.setMessage("¿Esta seguro que desea eliminar a todos los Tarjetas?")
 
             dialog.setNegativeButton("No") { _,_ ->
                 return@setNegativeButton
             }
 
             dialog.setPositiveButton("Yes") { _,_ ->
-                Toast.makeText(requireContext(), "Las direcciones fueron eliminadas con éxito! ", Toast.LENGTH_SHORT).show()
-
-                addresViewModel.deleteAllAddress()
+                Toast.makeText(requireContext(), "Las Tarjetas fueron eliminadas con éxito! ", Toast.LENGTH_SHORT).show()
+                cardViewModel.deleteAllCards()
             }
 
             dialog.create().show()

@@ -16,32 +16,33 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.navigation.fragment.findNavController
 import mylogin.com.R
-import mylogin.com.databinding.FragmentAddresUpdateBinding
-import mylogin.com.model.Addres
-import mylogin.com.viewModel.AddresViewModel
+import mylogin.com.databinding.FragmentCardUpdateBinding
+import mylogin.com.model.Card
+import mylogin.com.viewModel.CardViewModel
 
-class AddresUpdateFragment : Fragment(), MenuProvider {
+class CardUpdateFragment : Fragment(), MenuProvider {
 
-    private lateinit var binding: FragmentAddresUpdateBinding
-    private val addresViewModel by viewModels<AddresViewModel>()
+    private lateinit var binding: FragmentCardUpdateBinding
+    private val cardViewModel by viewModels<CardViewModel>()
 
-    private var addres: Addres? = null
+    val nothing = null
+    private var card: Card? = nothing
 
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentAddresUpdateBinding.inflate(inflater, container, false)
+        binding = FragmentCardUpdateBinding.inflate(inflater, container, false)
 
-        addres = arguments?.getSerializable("addres") as Addres // Bundle
-        binding.direccionInput.setText(addres?.let { it.street })
-        binding.alturaInput.setText(addres?.let { it.height })
-        binding.codigoPostalInput.setText(addres?.let { it.postalcode })
-        binding.provinciaInput.setText(addres?.let { it.state })
+        card = arguments?.getSerializable("card") as Card // Bundle
+        binding.cardNumberInput.setText(card?.let { it.numero })
+        binding.cardFechaVencInput.setText(card?.let { it.date })
+        binding.cardHolderNameInput.setText(card?.let { it.name })
 
-        binding.addresBtn.setOnClickListener {
-            validateFields(addres!!)
+
+        binding.cardBtn.setOnClickListener {
+            validateFields(card!!)
         }
 
         val menuHost: MenuHost = requireActivity()
@@ -62,21 +63,20 @@ class AddresUpdateFragment : Fragment(), MenuProvider {
         return binding.root
     }
 
-    private fun validateFields(addres: Addres) {
+    private fun validateFields(card: Card) {
 
-        val street = binding.direccionInput.text.toString()
-        val height = binding.alturaInput.text.toString()
-        val postalcode = binding.codigoPostalInput.text.toString()
-        val state =binding.provinciaInput.text.toString()
+        val numero = binding.cardNumberInput.text.toString()
+        val date = binding.cardFechaVencInput.text.toString()
+        val name = binding.cardNumberInput.text.toString()
 
 
-        if (street.isNotEmpty() && height.isNotEmpty() && postalcode.isNotEmpty()&& state.isNotEmpty()) {
+        if (numero.isNotEmpty() && date.isNotEmpty() && name.isNotEmpty()) {
 
-            val addres = addres.copy(street = street, height = height, postalcode = postalcode, state=state)
-            addresViewModel.updateAddres(addres=addres)
+            val card = card.copy(numero = numero, date = date, name = name)
+            cardViewModel.updateCard(card=card)
             Toast.makeText(requireContext(), " La modificación fue realizada con éxito!", Toast.LENGTH_SHORT).show()
 
-            findNavController().navigate(R.id.action_updateFragmentAddres_to_listFragmentAddres)
+            findNavController().navigate(R.id.action_updateFragmentCard_to_listFragmentCard)
 
         } else {
             Toast.makeText(requireContext(), "Complete todos los campos!", Toast.LENGTH_SHORT).show()
@@ -93,7 +93,7 @@ class AddresUpdateFragment : Fragment(), MenuProvider {
     override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
         return when(menuItem.itemId) {
             R.id.menu_delete -> {
-                deleteAddres()
+                deleteCard()
                 true
             }
 
@@ -103,21 +103,21 @@ class AddresUpdateFragment : Fragment(), MenuProvider {
         }
     }
 
-    private fun deleteAddres() {
+    private fun deleteCard() {
         val dialog = AlertDialog.Builder(requireContext())
 
         dialog.setTitle("¿Desea Eliminar?")
-        dialog.setMessage("Esta seguro que desea eliminar ha ${addres!!.street}")
+        dialog.setMessage("Esta seguro que desea eliminar ha ${card!!.numero}")
 
         dialog.setNegativeButton(getString(R.string.no_option)) { _,_ ->
             return@setNegativeButton
         }
 
         dialog.setPositiveButton("Yes") { _, _ ->
-            addresViewModel.deleteAddres(addres = addres!!)
+            cardViewModel.deleteCard(card = card!!)
             Toast.makeText(requireContext(), "User eliminado!", Toast.LENGTH_SHORT).show()
 
-            findNavController().navigate(R.id.action_updateFragmentAddres_to_listFragmentAddres)
+            findNavController().navigate(R.id.action_updateFragmentCard_to_listFragmentCard)
         }
 
         dialog.create().show()

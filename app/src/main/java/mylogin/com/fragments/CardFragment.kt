@@ -26,6 +26,7 @@ class CardFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding= FragmentCardBinding.inflate(inflater,container,false)
+       /*
         tvcard=binding.tvcard
 
         expiryDateInput=binding.expiryDateInput
@@ -85,7 +86,7 @@ class CardFragment : Fragment() {
         }
 
 
-
+*/
 
         return binding.root
     }

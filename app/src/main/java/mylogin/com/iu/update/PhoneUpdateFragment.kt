@@ -69,6 +69,7 @@ class PhoneUpdateFragment : Fragment(), MenuProvider {
             //val user = User(id = user.id, name = name, lastName = lastName, age = age.toInt())
             val phone = phonee.copy(phone = phone)
             phoneViewModel.updatePhone(phone = phone)
+            Toast.makeText(requireContext(), " La modificación fue realizada con éxito!", Toast.LENGTH_SHORT).show()
 
             findNavController().navigate(R.id.action_updateFragmentPhone_to_listFragmentPhone)
 

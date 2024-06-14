@@ -13,12 +13,10 @@ import androidx.fragment.app.Fragment
 import mylogin.com.fragments.CardFragment
 import mylogin.com.fragments.AddresFragment
 import mylogin.com.fragments.ClaimsFragment
-import mylogin.com.fragments.FavoritesFragment
 import mylogin.com.fragments.PhoneFragment
 import mylogin.com.fragments.MenuFragment
 import com.google.android.material.navigation.NavigationView
 import mylogin.com.databinding.ActivityHomeBinding
-import mylogin.com.iu.ListPhoneFragment
 
 class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
